@@ -1,0 +1,100 @@
+@import "../../global.scss";
+.intro {
+  background-color: white;
+  text-align: center;
+  overflow: hidden;
+
+  header {
+    object-fit: cover;
+
+    .main-img {
+      filter: brightness(50%);
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    .icon-intro {
+      img {
+        display: block;
+        width: 5em;
+        height: 5em;
+      }
+    }
+    .icon-intro {
+      width: 5em;
+      height: 5em;
+      color: white;
+    }
+    .border-intro {
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
+    }
+    .button-intro {
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      font-size: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #000;
+      background-color: #fff;
+      padding: 0.5em 1em;
+      transition: all 0.3s ease 0s;
+      @include mobile {
+        font-size: 1em;
+      }
+      &:hover {
+        background-color: #2ee59d;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+    }
+    .ityped-cursor {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    h1,
+    h2,
+    h3 {
+      color: #e1fcfd;
+      font-weight: 500;
+    }
+    h1 {
+      font-size: 2.5em;
+      letter-spacing: 3px;
+      @include mobile {
+        font-size: 2em;
+      }
+    }
+    h2 {
+      font-size: 2em;
+      letter-spacing: 2px;
+    }
+    h3 {
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      span {
+        color: #2ee59d;
+      }
+    }
+  }
+}

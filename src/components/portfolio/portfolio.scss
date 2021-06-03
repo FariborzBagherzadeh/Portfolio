@@ -1,0 +1,68 @@
+@import "../../global.scss";
+.portfolio {
+  background-color: #ffffff;
+  margin-left: -2em;
+  @include mobile {
+    margin-left: 0;
+  }
+  .portfolio-title {
+    padding: 1em 2em;
+    color: #4a5fc1;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    p {
+      color: #000;
+      font-size: 0.8em;
+      letter-spacing: 1.2px;
+    }
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  .portfolio-biography-img {
+    width: 100%;
+    text-align: center;
+    div {
+      padding: 1em 0;
+      a {
+        color: #E5B9A8;
+        padding: 0.6em 0.6em;
+        transition: color 0.3s ease;
+        svg {
+          max-width: 40px;
+          max-height: 40px;
+          width: 100px;
+          height: 40px;
+        }
+        &:hover {
+          color: #394F8A;
+        }
+      }
+    }
+    h3,
+    h1,
+    h4 {
+      letter-spacing: 1.5px;
+      padding: 0.3em 0;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h3 {
+      font-size: 1.3em;
+    }
+    h4 {
+      font-size: 1em;
+      color: rgba(0, 0, 0, 0.555);
+    }
+    img {
+      max-width: 300px;
+      width: 90vw;
+      border-radius: 50%;
+      filter: brightness(70%);
+    }
+  }
+}

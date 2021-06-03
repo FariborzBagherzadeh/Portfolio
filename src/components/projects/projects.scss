@@ -1,0 +1,59 @@
+@import "../../global.scss";
+
+.project {
+
+  .project-title {
+    padding: 1em 1em;
+    @include mobile {
+      text-align: center;
+    }
+    h1 {
+      color: #323232;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+  }
+  .project-card-img {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 1em !important;
+    img {
+      max-width: 300px;
+      width: 250px;
+      height: 250px;
+      box-shadow: 1px 1px 8px 0 #000;
+      border-radius: 1em;
+    }
+    @include mobile {
+      text-align: center;
+    }
+  }
+  .project-card-body {
+    margin-left: auto;
+    margin-right: auto;
+
+    h1 {
+      color: #323232;
+      letter-spacing: 2px;
+      font-weight: 300;
+      font-size: 2em;
+    }
+    p {
+      width: 95%;
+      color: #323232;
+      letter-spacing: 1.2px;
+      font-weight: 300;
+      font-size: 1.2em;
+      @include mobile {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    @include mobile {
+      text-align: center;
+      padding-top: 1em;
+    }
+  }
+ 
+}

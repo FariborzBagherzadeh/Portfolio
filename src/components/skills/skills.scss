@@ -1,0 +1,33 @@
+@import "../../global.scss";
+
+.skill {
+  background-color: #eaf2fa;
+  .skill-title {
+    margin-top: 2em;
+    h1 {
+      color: #323232;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+  }
+  .skill-card {
+    margin-top: 2em;
+    text-align: center;
+    padding-top: 2em;
+    h2 {
+      color: #323232;
+      font-size: 1.5em;
+      padding-top: 1em;
+      font-weight: 300;
+    }
+    p{
+        font-weight: 200;
+        font-size: 1.2em;
+    }
+    img {
+      max-width: 300px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
