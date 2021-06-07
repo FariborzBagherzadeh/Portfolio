@@ -1,6 +1,7 @@
-$mainColor: #394F8A;
-
+$mainColor: #394f8a;
+$primary-color : #2ee59d;
 $width: 768px;
+
 
 @mixin mobile {
   @media (max-width: #{$width}) {
@@ -8,3 +9,8 @@ $width: 768px;
   }
 }
 
+@mixin pc {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}

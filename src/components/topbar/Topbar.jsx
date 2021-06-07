@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import "./topbar.scss";
 
 export default function Topbar({
@@ -5,10 +6,22 @@ export default function Topbar({
   setMenuOpen,
   menuHover,
   setMenuHover,
+  navbar,
+  setNavbar,
 }) {
+  const changeBackground = () => {
+    window.scrollY > 70 ? setNavbar(true) : setNavbar(false);
+  };
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <div
-      className={"topbar " + (menuOpen && "active  ") + (menuHover && " hover")}
+      className={
+        "topbar  " +
+        (menuOpen && "active  ") +
+        (menuHover && " hover  ") +
+        (navbar && " navbarBackground  ")
+      }
       onMouseEnter={() => setMenuHover(!menuHover)}
       onMouseLeave={() => setMenuHover(!menuHover)}
     >
@@ -16,26 +29,36 @@ export default function Topbar({
         <div className="left">
           <div className="itemContainer">
             <div className="itemContainer1">
-              <a href="#intro">Home</a>
+              <Link to="home" smooth={true} duration={1000}>
+                Home
+              </Link>
             </div>
             <div className="itemContainer1">
-              <a href="#portfolio">Portfolio</a>
+              <Link to="portfolio" smooth={true} duration={1000}>
+                Portfolio
+              </Link>
             </div>
             <div className="itemContainer1">
-              <a href="#skills">Skills</a>
+              <Link to="skills" smooth={true} duration={1000}>
+                Skills
+              </Link>
             </div>
             <div className="itemContainer1">
-              <a href="#projects">Projects</a>
+              <Link to="project" smooth={true} duration={1000}>
+                Projects
+              </Link>
             </div>
             <div className="itemContainer1">
-              <a href="#certifications">Certifications</a>
-            </div>
-            <div className="itemContainer1">
-              <a href="#articles">Articles</a>
+              <Link to="certifications" smooth={true} duration={1000}>
+                Certifications
+              </Link>
             </div>
 
             <div className="itemContainer1">
-              <a href="#contact">Contact</a>
+            <Link to="contact" smooth={true} duration={1000}>
+                Contact
+              </Link>
+         
             </div>
           </div>
         </div>

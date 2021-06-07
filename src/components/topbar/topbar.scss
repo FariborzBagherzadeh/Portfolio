@@ -1,34 +1,38 @@
 @import "../../global.scss";
 
 .topbar {
- 
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.068);
-  color: $mainColor;
-  width: 100%;
+  background-color: $mainColor;
+  color: white;
+  width: 100vw !important;
   height: 70px;
   position: fixed;
   top: 0;
   z-index: 3;
-  transition: all 1s ease;
-  &.hover {
-    background-color: #394f8a !important;
-    .itemContainer {
-      a {
-        color: white !important;
-        transition: all 0.5s ease !important;
-        &:hover {
-          color: #2ee59d !important;
+  transition: background-color 0.5s ease , height 0.5s ease;
+  @include pc {
+    &.hover {
+      background-color: $mainColor !important;
+      .itemContainer {
+        a {
+          color: white !important;
+          transition: all 0.5s ease !important;
+          cursor: pointer;
+          &:hover {
+            color: $primary-color !important;
+          }
         }
       }
     }
   }
+
   .wrapper {
-    font-size: 1.2em;
-    padding: 1em 1.2em;
+    font-size: 1.1em;
+    padding: 1em 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
 
     .left {
       display: flex;
@@ -47,7 +51,7 @@
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       .itemContainer1 {
         padding: 0.2em 1em;
       }
@@ -65,11 +69,12 @@
         padding-left: 1em;
         font-size: 1em;
         font-weight: 300;
-        transition: all 0.3s ease;
+        transition: color 0.5s ease;
       }
     }
     .right {
       display: none;
+
       @include mobile {
         display: flex;
       }
@@ -80,10 +85,11 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
+
         span {
           width: 100%;
           height: 3px;
-          background-color: $mainColor;
+          background-color: #fff;
           transform-origin: left;
           transition: background-color 1s, transform 1s, opacity 1s ease;
         }
@@ -91,20 +97,35 @@
     }
   }
   &.active {
-    background-color: $mainColor;
-    color: white;
+    background-color: $mainColor !important;
+    color: white !important;
     .hamburger {
       span {
         &:first-child {
-          background-color: white;
+          background-color: white !important;
           transform: rotate(45deg);
         }
         &:nth-child(2) {
           opacity: 0;
         }
         &:last-child {
-          background-color: white;
+          background-color: white !important;
           transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  &.navbarBackground {
+    background-color: #fff;
+    color: $mainColor;
+    height: 78px;
+    .wrapper {
+      padding-top: 1.3em;
+    }
+    .right {
+      .hamburger {
+        span {
+          background-color: $mainColor;
         }
       }
     }

@@ -1,7 +1,8 @@
 import "./intro.scss";
 import React, { useEffect, useRef } from "react";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import { init } from "ityped";
+import { Element, Link } from "react-scroll";
 export default function Intro() {
   const textRef = useRef();
   useEffect(() => {
@@ -10,48 +11,55 @@ export default function Intro() {
       typeSpeed: 200,
       backSpeed: 100,
       strings: [
-        "Programming",
-        "CAD/CAM",
-        "Data Scientist",
-        "Machine Learning",
-        "Articles",
+        "PROGRAMMING",
+        "FRONT-END DEVELOPER",
+        "NODE JS",
+        "MONGO DB",
+        "REACT JS",
       ],
     });
   }, []);
   return (
-    <div className="intro" id="intro">
-      <header>
-        <img className="main-img" src="/assest/ai.jpg" alt="AI" />
-
-        <section className="hero-header-text">
+    <Grid container className="intro">
+      <Element name="home" className="home"></Element>
+      <Grid container item alignItems="center" justify="center">
+        <Grid item className="intro-title">
           <div className="icon-intro">
-            <img src="/assest/intro-icon-ai.svg" alt="" />
+            <img src="/assest/programmer.svg" alt="programmer" />
           </div>
-
-          <br />
-          <br />
           <div className="border-intro">
             <br />
             <h2>HI I'M</h2>
             <br />
-            <h1>FARAMARZ BAGHERZADEH</h1>
+            <h1>FARIBORZ BAGHERZADEH</h1>
             <br />
             <h3>
-              Abilities <span ref={textRef}></span>
+              <span ref={textRef}></span>
             </h3>
             <br />
           </div>
-          <br />
-          <br />
+
           <Button
             className="button-intro"
             variant="contained"
             href="#portfolio"
           >
-            Read More
+            <Link to="portfolio" smooth={true} duration={1000}>
+              Read More
+            </Link>
           </Button>
-        </section>
-      </header>
-    </div>
+        </Grid>
+        <Grid item className="intro-img">
+          <img src="/assest/Website-Design-Gif.webp" alt="web" />
+        </Grid>
+      </Grid>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,96L48,112C96,128,192,160,288,149.3C384,139,480,85,576,53.3C672,21,768,11,864,42.7C960,75,1056,149,1152,170.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </Grid>
   );
 }

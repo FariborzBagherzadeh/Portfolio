@@ -1,11 +1,13 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import { Instagram, WhatsApp, Email, Telegram } from "@material-ui/icons";
+import { Element } from "react-scroll";
 import "./portfolio.scss";
 
 export default function Portfolio() {
   return (
-    <Grid container className="portfolio" id="portfolio">
+    <Grid container className="portfolio">
+      <Element name="portfolio" className="home"></Element>
       <Grid item className="" container justify="center" alignItems="center">
         <Grid
           className="portfolio-biography-img"
@@ -16,10 +18,10 @@ export default function Portfolio() {
           xl={6}
         >
           <br />
-          <img src="/assest/fz.jpg" alt="fz" />
-          <h1>FARAMARZ BAGHERZADE</h1>
-          <h3>The University of Gadansk</h3>
-          <h4>PHD Student</h4>
+          <img src="/assest/fb.jpg" alt="fz" />
+          <h1>FARIBORZ BAGHERZADE</h1>
+          <h3>The University of Mashhad</h3>
+          <h4>Bachelor Degree</h4>
           <div>
             <a href="www.gmail.com">
               <Email />

@@ -1,11 +1,11 @@
 @import "../../global.scss";
 
 .skill {
-  background-color: #eaf2fa;
+  background: linear-gradient(to right, #394f8a, #915a9b);
   .skill-title {
     margin-top: 2em;
     h1 {
-      color: #323232;
+      color: #fff;
       font-weight: 500;
       letter-spacing: 2px;
     }
@@ -15,15 +15,12 @@
     text-align: center;
     padding-top: 2em;
     h2 {
-      color: #323232;
+      color: #fff;
       font-size: 1.5em;
       padding-top: 1em;
       font-weight: 300;
     }
-    p{
-        font-weight: 200;
-        font-size: 1.2em;
-    }
+
     img {
       max-width: 300px;
       width: 100px;
