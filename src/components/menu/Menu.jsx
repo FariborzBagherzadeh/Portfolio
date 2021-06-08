@@ -22,12 +22,7 @@ export default function Menu({ menuOpen, setMenuOpen }) {
           </Link>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <Link to="project" smooth={true} duration={1000}>
-            Projects
-          </Link>
-        </li>
-        <li onClick={() => setMenuOpen(false)}>
-          <Link to="certifications" smooth={true} duration={1000}>
+          <Link to="certification" smooth={true} duration={1000}>
             Certifications
           </Link>
         </li>

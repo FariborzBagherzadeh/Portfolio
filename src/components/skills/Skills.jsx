@@ -12,11 +12,13 @@ export default function Skills() {
           d="M0,288L30,261.3C60,235,120,181,180,186.7C240,192,300,256,360,277.3C420,299,480,277,540,245.3C600,213,660,171,720,149.3C780,128,840,128,900,144C960,160,1020,192,1080,186.7C1140,181,1200,139,1260,128C1320,117,1380,139,1410,149.3L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
         ></path>
       </svg>
-      <Element name="skills" className="home" style={{marginTop:"0"}}></Element>
+      <Element
+        name="skills"
+        className="home"
+        style={{ marginTop: "0" }}
+      ></Element>
       <Grid container item justify="center">
-      
         <Grid item className="skill-title">
-       
           <h1>Skills</h1>
         </Grid>
       </Grid>

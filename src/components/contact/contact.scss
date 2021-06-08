@@ -1,2 +1,21 @@
+@import "../../global.scss";
 .contact {
+  background: linear-gradient(to right, #FFF5FF, #FFE8F7);
+  .contact-title {
+    font-size: 2.1em;
+    letter-spacing: 1px;
+  }
+
+  .contact-form {
+    margin-top: 2em;
+    width: 100%;
+
+    .contact-form-mdb {
+      width: 50%;
+      p {
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+    }
+  }
 }

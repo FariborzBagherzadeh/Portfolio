@@ -1,2 +1,32 @@
 @import "../../global.scss";
 
+.certifications {
+  .certifications-title {
+    h1 {
+      font-size: 2.1em;
+      letter-spacing: 1px;
+    }
+  }
+  .certifications-card {
+    padding: 1em 1em;
+    transition: all 0.5s ease;
+    a {
+      text-decoration: none;
+      img {
+        box-shadow: 1px 1px 6px 0px black;
+        max-width: 400px;
+        transition: all 0.5s ease;
+        border-radius: 10px;
+      }
+    }
+    &:hover {
+      transform: translateY(-5%);
+      filter: contrast(110%);
+      a {
+        img {
+          box-shadow: 1px 1px 8px 2px black;
+        }
+      }
+    }
+  }
+}

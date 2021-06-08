@@ -43,22 +43,18 @@ export default function Topbar({
                 Skills
               </Link>
             </div>
+          
             <div className="itemContainer1">
-              <Link to="project" smooth={true} duration={1000}>
-                Projects
-              </Link>
-            </div>
-            <div className="itemContainer1">
-              <Link to="certifications" smooth={true} duration={1000}>
+              <Link to="certification" smooth={true} duration={1000}>
                 Certifications
               </Link>
             </div>
+         
 
             <div className="itemContainer1">
-            <Link to="contact" smooth={true} duration={1000}>
+              <Link to="contact" smooth={true} duration={1000}>
                 Contact
               </Link>
-         
             </div>
           </div>
         </div>
